@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, user-scalable=no">
+  <title>Tetris – Touch</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <main class="wrap">
+    <header class="hud">
+      <div class="score">Score: <strong id="score">0</strong></div>
+    </header>
+
+    <canvas id="game" width="240" height="480" aria-label="Tetris"></canvas>
+
+    <nav class="controls" aria-label="Touch-Steuerung">
+      <button id="left"  aria-label="Links">◀️</button>
+      <button id="rotate" aria-label="Drehen">🔄</button>
+      <button id="right" aria-label="Rechts">▶️</button>
+      <button id="soft"  aria-label="Schneller runter">⬇️</button>
+      <button id="hard"  aria-label="Ganz runter">⏬</button>
+    </nav>
+  </main>
+
+  <script src="./tetris.js"></script>
+</body>
+</html>
