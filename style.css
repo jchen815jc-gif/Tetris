@@ -1,57 +1,47 @@
-:root {
-  --bg: #0f0f10;
-  --panel: #151517;
-  --text: #f5f6f7;
-  --muted: #a0a4aa;
-  --safe-b: env(safe-area-inset-bottom);
-  --safe-t: env(safe-area-inset-top);
-}
-
-* { box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
-
-html, body {
-  height: 100%;
+body {
+  background: #111;
+  color: #fff;
+  font-family: sans-serif;
+  text-align: center;
   margin: 0;
-  background: var(--bg);
-  color: var(--text);
-  font-family: -apple-system, system-ui, Segoe UI, Roboto, sans-serif;
+  padding: 0;
 }
 
-.wrap { min-height: 100%; display: grid; grid-template-rows: auto 1fr auto; gap: 12px; padding: calc(10px + var(--safe-t)) 14px calc(12px + var(--safe-b)); }
+h1 {
+  margin: 10px 0;
+}
 
-.hud { display:flex; justify-content:center; }
-.hud .score { background: var(--panel); padding: 10px 14px; border-radius: 12px; box-shadow: inset 0 0 0 1px #222; }
-.hud strong { font-variant-numeric: tabular-nums; }
+#score {
+  font-size: 20px;
+  margin: 10px 0;
+}
 
 #game {
-  display:block; margin: 0 auto;
-  width: min(92vw, 420px);
-  height: calc(min(92vw, 420px) * 2 / 1.2);
-  background: #101114;
-  border-radius: 12px;
-  box-shadow: 0 10px 30px rgba(0,0,0,.35), inset 0 0 0 1px #1f2126;
-  touch-action: none;
-}
-
-.controls {
-  display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  gap: 12px;
-  max-width: 560px;
+  border: 2px solid #fff;
+  background: #000;
+  display: block;
   margin: 0 auto;
-  width: 100%;
 }
-.controls button {
-  padding: 16px 0;
-  font-size: 20px;
-  background: var(--panel);
-  color: var(--text);
-  border: 0;
-  border-radius: 14px;
-  box-shadow: inset 0 0 0 1px #24262a;
-}
-.controls button:active { transform: translateY(1px); }
 
-@media (min-width: 600px) {
-  #game { width: 360px; height: 600px; }
+#controls {
+  margin-top: 15px;
+}
+
+#controls .row {
+  margin: 5px 0;
+}
+
+#controls button {
+  font-size: 28px;
+  padding: 15px 25px;
+  margin: 5px;
+  border: none;
+  border-radius: 8px;
+  background: #333;
+  color: #fff;
+  cursor: pointer;
+}
+
+#controls button:active {
+  background: #666;
 }
